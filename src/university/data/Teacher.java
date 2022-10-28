@@ -1,15 +1,21 @@
-package org.university;
+package university.data;
 
-public class Teacher {
+public abstract class Teacher {
 
     private String teacherFullName;
-    private double baseSalary;
+    protected double baseSalary;
     private int teacherId;
+
+    public double totalSalary;
 
     public Teacher(String teacherFullName, double baseSalary) {
         this.teacherFullName = teacherFullName;
         this.baseSalary = baseSalary;
         this.teacherId = (int)(100000 * Math.random());
+        this.totalSalary = calculateSalary();
     }
+
+    public abstract double calculateSalary();
+
 
 }

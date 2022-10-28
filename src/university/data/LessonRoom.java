@@ -1,6 +1,4 @@
-package org.university;
-
-import java.util.ArrayList;
+package university.data;
 
 public class LessonRoom {
     private String lessonName;

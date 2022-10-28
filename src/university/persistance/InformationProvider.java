@@ -1,6 +1,6 @@
-package org.persistance;
+package university.persistance;
 
-import org.university.University;
+import university.data.University;
 
 public class InformationProvider {
     public static University universityInformationProvider(){
@@ -20,4 +20,6 @@ public class InformationProvider {
         university.createStudent("Lana Clinton", 19);
         university.createStudent("Sam Jackson", 21);
     }
+
+
 }

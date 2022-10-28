@@ -1,6 +1,5 @@
-import org.persistance.InformationProvider;
-import org.university.Student;
-import org.university.University;
+import university.persistance.InformationProvider;
+import university.data.University;
 
 import java.util.Scanner;
 

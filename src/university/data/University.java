@@ -1,4 +1,4 @@
-package org.university;
+package university.data;
 
 import java.util.ArrayList;
 

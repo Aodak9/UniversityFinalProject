@@ -1,4 +1,4 @@
-package org.university;
+package university.data;
 
 public class Student extends University{
 
