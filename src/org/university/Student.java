@@ -1,6 +1,6 @@
 package org.university;
 
-public class Student {
+public class Student extends University{
 
     private String studentFullName;
     private int studentId;
@@ -23,6 +23,5 @@ public class Student {
     public int getAge() {
         return age;
     }
-
 
 }

@@ -13,16 +13,19 @@ public class LessonRoom {
     }
 
     public String getLessonName() {
-        return lessonName;
+        return this.lessonName;
     }
 
     public int getLessonRoom() {
-        return lessonRoom;
+        return this.lessonRoom;
     }
 
     public Teacher getSelectedTeacher() {
-        return selectedTeacher;
+        return this.selectedTeacher;
     }
 
+    public void addTeacher(Teacher selectedTeacher){
+
+    }
 
 }
