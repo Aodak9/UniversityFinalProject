@@ -1,27 +1,26 @@
 package university.data;
 
-public class Student extends University{
+public class Student extends User{
+    private Integer studentId;
+    private Integer age;
 
-    private String studentFullName;
-    private int studentId;
-    private int age;
-
-    public Student(String studentFullName, int age) {
-        this.studentFullName = studentFullName;
+    public Student(String fullName, String username, int age) {
+        super(fullName, username);
         this.age = age;
         this.studentId = (int)(100000 * Math.random());
     }
 
-    public String getStudentFullName() {
-        return studentFullName;
+    public Integer getStudentId() {
+        return this.studentId;
     }
 
-    public int getId() {
-        return studentId;
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + this.studentId +
+                ", age=" + this.age +
+                ", fullName='" + super.fullName + '\'' +
+                ", username='" + super.username + '\'' +
+                '}';
     }
-
-    public int getAge() {
-        return age;
-    }
-
 }

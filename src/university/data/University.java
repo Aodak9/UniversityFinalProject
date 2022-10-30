@@ -21,13 +21,5 @@ public class University {
         return studentsList;
     }
 
-    public String createStudent(String studentFullName, int age){
-        Student newStudent = new Student(studentFullName, age);
-        this.studentsList.add(newStudent);
-        return studentFullName + "added as new student";
-    }
 
-    public int getStudentListSize() {
-        return studentsList.size();
-    }
 }

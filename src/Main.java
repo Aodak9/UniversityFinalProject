@@ -1,3 +1,4 @@
+import university.data.Student;
 import university.persistance.InformationProvider;
 import university.data.University;
 
@@ -10,14 +11,21 @@ public class Main {
 
         University university = InformationProvider.universityInformationProvider();
 
+        System.out.println("*****************************");
+        System.out.println("*****************************");
         System.out.println("Welcome to Globant University");
+        System.out.println("*****************************");
+        System.out.println("*****************************");
 
         while(userOption != 5){
+            System.out.println("************");
             System.out.println("Menu options");
-            System.out.println("1. Full university teacher´s list");
+            System.out.println("************");
+            System.out.println("1. Full university students list");
             userOption = scan.nextInt();
             if(userOption == 1) {
-                System.out.println("Teacher´s List: ");
+                System.out.println("Students List: ");
+                university.getStudentsList().toString();
             }
 
         }
