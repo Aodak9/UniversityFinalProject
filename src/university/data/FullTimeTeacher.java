@@ -4,19 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FullTimeTeacher extends Teacher{
-    private int yearsOfExperience;
+    private Integer yearsOfExperience;
 
-    private List<FullTimeTeacher> fullTimeTeacherList;
+    public FullTimeTeacher(){
+    }
 
-    public FullTimeTeacher(String teacherFullName, double baseSalary, int years){
-        super(teacherFullName, baseSalary);
-        this.fullTimeTeacherList = new ArrayList<>();
+    public FullTimeTeacher(String fullName, String username, Double baseSalary, Integer years){
+        super(fullName, username, baseSalary);
         this.yearsOfExperience = years;
     }
 
     @Override
     public double calculateSalary() {
-        double salary = baseSalary * (yearsOfExperience + 110/100);
-        return salary;
+        return (super.baseSalary * (this.yearsOfExperience * 110/100));
+    }
+
+    @Override
+    public String toString(){
+        return "Teacher id: " + super.teacherId +
+                " | Full time | -> " +
+                "Name: " + super.fullName +
+                " -Username: " + super.username +
+                " -Base salary: " + super.baseSalary +
+                " -Years of experience: " + this.yearsOfExperience +
+                " - Monthly salary: " + String.format("%,.1f",calculateSalary());
     }
 }

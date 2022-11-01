@@ -3,7 +3,8 @@ package university.data;
 public abstract class Teacher extends User {
     protected Double baseSalary;
     protected Integer teacherId;
-    protected Double totalSalary;
+
+    private static Integer teacherIdCount = 300;
 
     public Teacher(){
     }
@@ -11,8 +12,11 @@ public abstract class Teacher extends User {
     public Teacher(String fullName, String userName, Double baseSalary) {
         super(fullName, userName);
         this.baseSalary = baseSalary;
-        this.teacherId = (int)(100000 * Math.random());
-        this.totalSalary = calculateSalary();
+        this.teacherId = ++teacherIdCount;
+    }
+
+    public Integer getTeacherId() {
+        return teacherId;
     }
 
     public abstract double calculateSalary();

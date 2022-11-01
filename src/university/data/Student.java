@@ -4,10 +4,15 @@ public class Student extends User{
     private Integer studentId;
     private Integer age;
 
+    private static Integer studentIdCount = 400;
+
+    public Student(){
+    }
+
     public Student(String fullName, String username, int age) {
         super(fullName, username);
         this.age = age;
-        this.studentId = (int)(100000 * Math.random());
+        this.studentId = ++studentIdCount;
     }
 
     public Integer getStudentId() {
@@ -16,11 +21,6 @@ public class Student extends User{
 
     @Override
     public String toString() {
-        return "Student{" +
-                "studentId=" + this.studentId +
-                ", age=" + this.age +
-                ", fullName='" + super.fullName + '\'' +
-                ", username='" + super.username + '\'' +
-                '}';
+        return "Student Id: " + this.studentId + ". - Name: " + super.fullName + " - Username: " + super.username + " - Age: " + this.age;
     }
 }
